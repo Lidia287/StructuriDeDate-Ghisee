@@ -1,0 +1,99 @@
+Fisier README pentru Tema1 :
+
+
+Functia deschide_ghisee
+	Utilizez 2 if-uri 
+		-unul pentru cand ghiseele nu fusesera alocate si le aloc
+		-unul pentru cand fusesera alocate , pasii fiind urmatorii :
+			* pun toti oamenii din ghiseele anterioare intr-o lista nou creata
+			* eliberez ghiseele anterioare si aloc altele 
+			* creez o noua lista in care voi ordona elementele listei anterioare
+			* adaug oamenii din lista ordonata la ghisee pana cand se termina lista	
+
+
+
+Functia  adauga_persoana
+	Iau in considerare mai multe cazuri
+		-daca nu exista ghiseul la care sa adaugam persoana , ies din functie
+		-daca lista era vida, adaug nodul si primul = ultimul = nod 
+		-daca putem insera nodul inainte de primul element
+			*caz cand prioritatea nodului este mai mare
+			*caz cand prioritatile sunt egale si se compara numele
+		-altfel se merge mai departe pana se gaseste un element de prioritate mai mica sau egala sau pana se ajunge la NULL
+		-daca se ajunge la NULL , inseram la sfarsit
+		-daca se poate insera inainte de un element cu prioritatea mai mica
+		-daca inseram  la mijloc sau la sfarsit 
+			*daca prioritatile sunt egale si nodul se insereaza inainte
+			*daca se poate insera inainte de un element cu prioritatea mai mica
+			*daca trebuie inserat la sfarsit
+		
+		
+
+
+Functia sterge_persoana
+	Iau in considerare mai multe cazuri
+		-daca nu exista ghiseul de la care sa stergem persoana, ies din functie
+		-daca lista era vida, ies din functie
+		-daca ghiseul are un singur om
+		-daca lista are mai mult de un om
+			*daca omul cautat este chiar primul 
+			*daca omul cautat este ultimul		
+			*daca elementul de sters este intre alte doua elemente
+		
+
+
+
+Functia sterge_primii_oameni
+	Operatiile vor fi efectuate pentru toate ghiseele
+		-daca ghiseul i este alocat si are 1 element cel putin
+		-daca ghiseul are un singur om
+		-daca ghiseul are mai multi oameni
+
+
+
+Functia inchide_ghisee
+	Eliberez memoria alocata
+
+
+
+Functia calculeaza_numar_total_oameni
+	Iau in considerare mai multe cazuri
+		-daca nu exista ghiseul indicat,avem eroare
+		-daca nu sunt alocate ghiseele , rezulta 0 oameni
+		-daca ghiseul i este alocat si are un element cel putin	
+			*pana cand ajungem la NULL , crestem numarul oamenilor din ghiseu
+
+
+
+Functia calculeaza_numar_oameni_ghiseu
+	Iau in considerare mai multe cazuri
+		-daca nu sunt alocate ghiseele , rezulta 0 oameni
+		-daca ghiseul i este alocat si are 1 element cel putin
+			*pana cand ajungem la NULL , crestem numarul oamenilor
+		
+
+
+Functia gaseste_pozitie_persoana
+	Iau in considerare mai multe cazuri
+		-daca nu exista ghiseul indicat,eroare
+		-daca lista era vida, eroare
+		-daca am gasit elementul , intoarcem pozitia
+		-daca omul nu s-a gasit la rand, eroare 
+
+
+
+Functia gaseste_persoana din fata
+	Iau in considerare mai multe cazuri
+		-daca nu exista ghiseul indicat
+		-daca lista era vida
+		-daca am gasit elementul , intoarcem numele
+		-daca s-a ajuns la final fara sa se gaseasca elementul
+
+
+
+Functia afiseaza_rand_ghiseu
+	Iau in considerare mai multe cazuri
+		-daca nu exista ghiseul indicat
+		-daca ghiseele nu sunt alocate
+		-daca ghiseul respectiv nu  este alocat
+		-altfel, afisam oamenii
